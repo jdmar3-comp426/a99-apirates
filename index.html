@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+    <title>Scourge of the Seven Seas Login</title>
+    <link rel="stylesheet" href="node_modules/bulma/css/bulma.css">
+</head>
+<body>
+<section style="background-color:rgb(255, 204, 65)" class="box has-text-centered">
+    <img src="https://i.imgur.com/yZbl9ej.gif" style="width:600px; height:400px;">
+</section>
+<section class="section" style="background-color:#00DADC">
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+                <h1 class="title has-text-centered">Login</h1>
+                <form class="box" id="loginForm" action="accountInfo.html">
+                    <div class="field">
+                        <label class="label">Username</label>
+                        <div class="control">
+                            <input class="input" type="text" placeholder="Enter Username" name="username">
+                        </div>
+                    </div>
+                    <div class="field">                        
+                        <div class="control">
+                            <input class="input" type="password" placeholder="Enter Password" name="password">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            <button class="button is-dark is-fullwidth" type="submit">Login</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="column">
+                <h1 class="title has-text-centered">Sign Up</h1>
+                <form class="box" id="signUpForm">
+                    <div class="field">
+                        <label class="label">Username</label>
+                        <div class="control">
+                            <input class="input" type="text" placeholder="Enter Username" name="username">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Email</label>
+                        <div class="control">
+                            <input class="input" type="text" placeholder="Enter Email">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Password</label>
+                        <div class="control">
+                            <input class="input" type="password" placeholder="Enter Password" name="password">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Choose Team</label>
+                        <div class="control">
+                            <div class="select">
+                                <select name="accountType">
+                                    <option>The Octopus Riders</option>
+                                    <option>The Giant Turtle Pillagers</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            <button class="button is-dark is-fullwidth" type="submit">Sign Up</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

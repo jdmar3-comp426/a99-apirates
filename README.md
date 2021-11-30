@@ -33,7 +33,7 @@ Some basic roles you will want to consider:
 # Brandon Hall & Joshua Spiess
 3. A documentation manager - someone to keep the documentation in order and identify what is missing and needs to be documented
 4. Roles for team members to take charge or different parts of the project. Possible roles:
-# Joshua Spies & Marcus Hayes
+# Joshua Spiess & Marcus Hayes
     4. Design lead
 
     Branch Name: __
