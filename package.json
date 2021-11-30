@@ -1,0 +1,29 @@
+{
+  "name": "a99-apirates",
+  "version": "0.0.1",
+  "description": "Pirate clicker game.",
+  "main": "index.html",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdmar3-comp426/a99-apirates.git"
+  },
+  "author": "",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/jdmar3-comp426/a99-apirates/issues"
+  },
+  "homepage": "https://github.com/jdmar3-comp426/a99-apirates#readme",
+  "dependencies": {
+    "better-sqlite3": "^7.4.5",
+    "browser-sync": "^2.27.7",
+    "concurrently": "^6.4.0",
+    "express": "^4.17.1",
+    "md5": "^2.3.0"
+  }
+}
