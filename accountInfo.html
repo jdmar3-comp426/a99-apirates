@@ -2,6 +2,7 @@
 <head>
     <title>Account Information</title>
     <link rel="stylesheet" href="node_modules/bulma/css/bulma.css">
+    <!--Luis Scripts-->
     <script src="forms.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/core.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
@@ -12,6 +13,8 @@
         <div class="columns">
             <div class="column is-one-fifth">
                 <button class="button is-dark" onclick="goBack()">Go Back</button>
+                <!--Go Back Button Functionality-->
+                <!--May need to be changed-->
                 <script>
                     function goBack() {
                         window.history.back();
@@ -27,25 +30,30 @@
 <section class="section" style="background-color:#00DADC">
     <h1 class="title has-text-centered">Current Information</h1>
     <div class="container">
-        <form class="box" id="verifyLogin">
+        <form class="box" id="currentInfo">
             <div class="field">
                 <label class="label">Current Username</label>
+                <!--Value will need to be pulled from database-->
                 <p>Current Username Output</p>
             </div>
             <div class="field">
                 <label class="label">Current Email</label>
+                <!--Value will need to be pulled from database-->
                 <p>Current Email Output</p>
             </div>
             <div class="field">
                 <label class="label">Current Password</label>
+                <!--Value will need to be pulled from database-->
                 <p>Current Password Output</p>
             </div>
             <div class="field">
                 <label class="label">Current Team</label>
+                <!--Value will need to be pulled from database-->
                 <p>Current Team Output</p>
             </div>
         </form>
         <h1 class="title has-text-centered">Update Information</h1>
+        <!--Update Information Form-->
         <form class="box" id="updateInfo">
             <div class="field">
                 <label class="label">New Username</label>
@@ -76,6 +84,7 @@
                     </div>
                 </div>
             </div>
+            <!--Update Button-->
             <div class="field">
                 <div class="control">
                     <button class="button is-dark is-fullwidth" type="submit">Update</button>
@@ -84,6 +93,7 @@
             <div class="content">
                 <p class="has-text-centered has-text-danger">Deleting your account will result in the removal of all data from our services. This action cannot be undone!</p>                
             </div>
+            <!--Delete Button-->
             <div class="field">
                 <div class="control">
                     <button class="button is-danger is-fullwidth" type="submit">Delete Account</button>

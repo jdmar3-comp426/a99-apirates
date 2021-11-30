@@ -1,5 +1,8 @@
-Scourge of the Seven Seas
-Cookie Clicker - Pirate-themed
+# Planning Documentation
+
+Name: Scourge of the Seven Seas
+
+Cookie Clicker - Pirate-Themed
 
 Clicking does damage to some displayed enemy
     - Each click -> lowers enemy health

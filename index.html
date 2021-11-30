@@ -2,6 +2,7 @@
 <head>
     <title>Scourge of the Seven Seas Login</title>
     <link rel="stylesheet" href="node_modules/bulma/css/bulma.css">
+    <!--Luis Scripts-->
     <script src="forms.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/core.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
@@ -15,6 +16,8 @@
         <div class="columns">
             <div class="column">
                 <h1 class="title has-text-centered">Login</h1>
+                <!--Login Form-->
+                <!--Will need to change action parameter to load main game page-->
                 <form class="box" id="loginForm" action="accountInfo.html">
                     <div class="field">
                         <label class="label">Username</label>
@@ -27,6 +30,7 @@
                             <input class="input" type="password" placeholder="Enter Password" name="password">
                         </div>
                     </div>
+                    <!--Login Button-->
                     <div class="field">
                         <div class="control">
                             <button class="button is-dark is-fullwidth" type="submit">Login</button>
@@ -36,7 +40,9 @@
             </div>
             <div class="column">
                 <h1 class="title has-text-centered">Sign Up</h1>
-                <form class="box" id="signUpForm">
+                <!--Sign Up Form-->
+                <!--Will need to change action parameter to load main game page-->
+                <form class="box" id="signUpForm" action="accountInfo.html">
                     <div class="field">
                         <label class="label">Username</label>
                         <div class="control">
@@ -66,6 +72,7 @@
                             </div>
                         </div>
                     </div>
+                    <!--Sign Up Button-->
                     <div class="field">
                         <div class="control">
                             <button class="button is-dark is-fullwidth" type="submit">Sign Up</button>
