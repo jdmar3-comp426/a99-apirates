@@ -34,22 +34,22 @@
             <div class="field">
                 <label class="label">Current Username</label>
                 <!--Value will need to be pulled from database-->
-                <p>Current Username Output</p>
+                <p id="currentUser">Current Username Output</p>
             </div>
             <div class="field">
                 <label class="label">Current Email</label>
                 <!--Value will need to be pulled from database-->
-                <p>Current Email Output</p>
+                <p id="currentEmail">Current Email Output</p>
             </div>
             <div class="field">
                 <label class="label">Current Password</label>
                 <!--Value will need to be pulled from database-->
-                <p>Current Password Output</p>
+                <p id="currentPass">Current Password Output</p>
             </div>
             <div class="field">
                 <label class="label">Current Team</label>
                 <!--Value will need to be pulled from database-->
-                <p>Current Team Output</p>
+                <p id="currentTeam">Current Team Output</p>
             </div>
         </form>
         <h1 class="title has-text-centered">Update Information</h1>
@@ -106,7 +106,14 @@
         console.log(fetch("http://localhost:5000/app/users/").then(res => {
             return res.json();
         }).then(data => {
-            console.log(data);
+            
+            console.log(data[data.length-1]);
+            console.log(data[data.length-1].id);
+            document.querySelector("#currentUser").innerHTML = data[data.length-1].user;
+            document.querySelector("#currentEmail").innerHTML = data[data.length-1].email;
+            document.querySelector("#currentPass").innerHTML = data[data.length-1].pass;
+            document.querySelector("#currentTeam").innerHTML = data[data.length-1].accountType;
+
         })
         
         );
