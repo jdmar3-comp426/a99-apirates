@@ -7,16 +7,16 @@ const Database = require('better-sqlite3');
 const db = new Database('user.db');
 
 // Is the database initialized or do we need to initialize it?
-const stmt = db.prepare(`SELECT name FROM sqlite_master WHERE type='table' and name='userinfo';`);
+const stmt = db.prepare(`SELECT name FROM sqlite_master WHERE type='table' and name='newuserinfo';`);
 let row = stmt.get();
 if (row === undefined) {
 // Echo information about what you are doing to the console.
     console.log('Your database appears to be empty. I will initialize it now.');
 // Set a const that will contain your SQL commands to initialize the database.
     const sqlInit = `
-        CREATE TABLE userinfo ( id INTEGER PRIMARY KEY, user TEXT, pass TEXT, email TEXT );
-		INSERT INTO userinfo (user, pass, email) VALUES ('admin','bdc87b9c894da5168059e00ebffb9077','admin@somedomain.com'), 
-        ('test','9241818c20435c6672dac2c4b6e6c071','test@somedomain.com')
+        CREATE TABLE newuserinfo ( id INTEGER PRIMARY KEY, user TEXT,  email TEXT, pass TEXT, accountType TEXT);
+		INSERT INTO newuserinfo (user, email, pass, accountType) VALUES ('admin','admin@somedomain.com', 'bdc87b9c894da5168059e00ebffb9077', 'The Octopus Riders'), 
+        ('test','test@somedomain.com', '9241818c20435c6672dac2c4b6e6c071', 'The Giant Turtle Pillagers')
     `;
 // Execute SQL commands that we just wrote above.
     db.exec(sqlInit);
