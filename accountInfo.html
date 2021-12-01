@@ -102,5 +102,15 @@
         </form>
     </div>
 </section>
+<script>
+        console.log(fetch("http://localhost:5000/app/users/").then(res => {
+            return res.json();
+        }).then(data => {
+            console.log(data);
+        })
+        
+        );
+    
+</script>
 </body>
 </html>
