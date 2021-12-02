@@ -16,7 +16,9 @@ pertaining to our database.
 
 Endpoints
 
+
 /app/
+
 
 -HTTP method GET
 
@@ -24,7 +26,9 @@ Endpoints
 
 -Reads at root endpoint.
 
+
 /app/new/user
+
 
 -HTTP method POST
 
@@ -36,11 +40,15 @@ Endpoints
 
 -Used for registering new users into the game.
 
+
 /app/user/login/
+
 
 -HTTP method POST
 
+
 /app/users
+
 
 -HTTP method GET
 
@@ -50,7 +58,9 @@ Endpoints
 
 -Used a lot for debugging/making sure our database was working as intended.
 
+
 /app/user/:id
+
 
 -HTTP method GET
 
@@ -58,7 +68,9 @@ Endpoints
 
 -Used for retrieving user game progress from the database.
 
+
 /app/update/user/:id
+
 
 -HTTP method PATCH
 
@@ -71,7 +83,9 @@ altering those that the user does not want to update.
 
 -Used for saving user game progress into the database.
 
+
 /app/delete/user/:id
+
 
 -HTTP method DELETE
 
