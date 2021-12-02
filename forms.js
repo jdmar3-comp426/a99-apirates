@@ -49,12 +49,12 @@ window.addEventListener( "load", function () {
                         alert( "Your account was deleted!" );
                     });
     
-                    sendRequest.addEventListener( "error", function(event){
+                    sendRequestDeletion.addEventListener( "error", function(event){
                         alert( "Deletion unsuccesfull. Please try again." );
                     });
 
-                    sendRequest.open( "DELETE", "http://localhost:5000/app/delete/user/" + id);
-                    sendRequest.send();
+                    sendRequestDeletion.open( "DELETE", "http://localhost:5000/app/delete/user/" + id);
+                    sendRequestDeletion.send();
                 }
 
         }
@@ -86,9 +86,55 @@ window.addEventListener( "load", function () {
                 }
         }
 
+        function saveGame(email){ //currently updates only email, will change to game variables we want to pass to update
+                const sendRequest = new XMLHttpRequest();
+
+                //uses a predefined form to find user,password to which we are inserting info, 
+                var user = document.getElementById("user4").value;     
+                var pass = CryptoJS.MD5(document.getElementById("pass4").value).toString();
+                sendRequest.open("GET", "http://localhost:5000/app/users",false)
+                
+                sendRequest.send();
+                console.log(sendRequest.responseText);
+
+                //finds ids of corresponding user to update
+                var id = 0;
+                var accountArray = JSON.parse(sendRequest.responseText);
+                for (var account of accountArray){
+                        console.log(account);
+                        if(account['user'] == user && account['pass'] == pass) {
+                          id = account['id'];
+                          break;
+                        } else {
+                          //if id = -1 we know we have invalid info
+                          id = -1;
+                        }
+                }
+                if (id == -1){
+                    alert("Invalid user information. Please try again.")
+                } else {
+                    const sendRequestUpdate = new XMLHttpRequest();
+                    const updateInfo = new URLSearchParams();
+                    updateInfo.append("user",user);        
+                    updateInfo.append("pass",document.getElementById("pass4").value);
+                    updateInfo.append("email",email)   
+                    sendRequestUpdate.addEventListener( "load", function(event){
+                        alert( "Your account was updated!" );
+                    });
+    
+                    sendRequestUpdate.addEventListener( "error", function(event){
+                        alert( "Update unsuccesfull. Please try again." );
+                    });
+
+                    sendRequest.open( "PATCH", "http://localhost:5000/app/update/user/" + id);
+                    sendRequest.send(updateInfo);
+                }
+                
+        }
         const form = document.getElementById( "signup" );
         const loginForm = document.getElementById("login");
         const deleteForm = document.getElementById("delete");
+        const updateButton = document.getElementById("save");
 
         form.addEventListener( "submit", function( event ){
                 event.preventDefault();
@@ -104,5 +150,9 @@ window.addEventListener( "load", function () {
                 event.preventDefault();
 
                 deleteUser();
+        })
+        updateButton.addEventListener("submit",function(event){
+                event.preventDefault();
+                saveGame(document.getElementById("email4").value)
         })
 });
