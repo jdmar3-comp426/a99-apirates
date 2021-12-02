@@ -17,11 +17,13 @@ pertaining to our database.
 Endpoints
 
 /app/
+
 -HTTP method GET
 -Makes sure that our API works as intended.
 -Reads at root endpoint.
 
 /app/new/user
+
 -HTTP method POST
 -CREATE a new user at endpoint /app/new
 -The user information that is set into the database depends in the URLSearchParams passed into it.
@@ -29,20 +31,24 @@ Endpoints
 -Used for registering new users into the game.
 
 /app/user/login/
+
 -HTTP method POST
 
 /app/users
+
 -HTTP method GET
 -READ a list of all users.
 -Used for retrieving all users so that we can scan them to find a user's particular id.
 -Used a lot for debugging/making sure our database was working as intended.
 
 /app/user/:id
+
 -HTTP method GET
 -Retrieves user data depending on the ID(database's primary key) supplied to the endpoint.
 -Used for retrieving user game progress from the database.
 
 /app/update/user/:id
+
 -HTTP method PATCH
 -UPDATE data for a single user dependent on the ID supplied to the endpoint.
 -Uses md5 to encrypt the password passed as parameter for a safe storage into the database.
@@ -51,6 +57,7 @@ altering those that the user does not want to update.
 -Used for saving user game progress into the database.
 
 /app/delete/user/:id
+
 -HTTP method DELETE
 -DELETE a single user dependent on the ID supplied to the endpoint.
 -Used when a user wants to delete their account.
