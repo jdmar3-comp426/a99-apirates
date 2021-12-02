@@ -9,12 +9,15 @@ function load_game() {
     // Here is where a GET request is needed from the DB for the player's current click counter,
     // their current multiplier value, and possibly their team
 
+
     // If new players are registered before game is loaded, may be no need for a new_game() function;
     // Should be able to just pull newly-initialized DB data for player
     update_reqmt_lock();
     document.getElementById("click_counter").innerHTML = counter;
     document.getElementById("active_upgrade_value").innerHTML = multiplier+1;
     document.getElementById("passive_upgrade_value").innerHTML = passive_multiplier+1;
+    document.getElementById("multiplier").innerHTML = multiplier;
+    document.getElementById("passive_multiplier").innerHTML = passive_multiplier;
 };
 
 function increase_active_reqmt() {
@@ -24,6 +27,7 @@ function increase_active_reqmt() {
 
 function increase_passive_reqmt() {
     req_passive_points = req_passive_points * 2;
+    console.log(req_passive_points);
     update_reqmt_lock();
 };
 
@@ -63,12 +67,10 @@ function buy_active_upgrade() {
     document.getElementById("active_upgrade_value").innerHTML = multiplier+1;
     document.getElementById("multiplier").innerHTML = multiplier;
     increase_active_reqmt();
-
-
 };
 
 function buy_passive_upgrade() {
-    passive_counter += 1;
+    passive_multiplier += 1;
     document.getElementById("passive_upgrade_value").innerHTML = passive_multiplier+1;
     document.getElementById("passive_multiplier").innerHTML = passive_multiplier;
     increase_passive_reqmt();
