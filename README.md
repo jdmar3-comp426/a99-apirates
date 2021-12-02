@@ -2,9 +2,9 @@
 
 # SCOURGE OF THE SEVEN SEAS
 
-Scourge of the Seven Seas is a pirate themed incremental game. 
+## Game Description
 
-
+Scourge of the Seven Seas is a pirate themed incremental game. Users are able to create an account consisting of a username, email, password, and team. Two teams are available: The Octopus Riders and The Giant Turtle Pillagers. Upon reaching the main game page, users can click on the pirate gif displayed to increase their score. Number of clicks are recorded, and once users reach certain thresholds, they are able to "buy" certain upgrades. These upgrades include increases in active points per click, as well as passive points. 
 
 ## Team Roles
 
