@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="interface.css"/>
+    </head>
+    <body>
+        <!-- <button id="button" onclick="buy_multiplier();">Buy Item</button> -->
+            <div id="game_screen">
+                <h1>Point Count: <span id="click_counter"></span></h1><br>
+                <img id="pirate" src="assets/temp.jpg" alt="Less gooo" width="600" height="400" onclick="active_click()"/>
+            </div>
+            <div id="item_shop">
+                <div id="item">
+                    <h4>Current Points/Click: <span id="multiplier"></span></h4>
+                    <h4>Increase your active clicks to <span id="active_upgrade_value"></span> points per click!</h4>
+                    <button id="active_click_upgrade" class="btn upgrade" onclick="buy_active_upgrade()">Buy Click Booster</button>
+                </div>
+                
+                <div id="item">
+                    <h4>Current Points/Second: <span id="passive_multiplier"></span></h4>
+                    <h4>Increase your passive clicks to <span id="passive_upgrade_value"></span> points/second!</h4>
+                    <button id="passive_click_upgrade" class="btn upgrade" onclick="buy_passive_upgrade()">Buy Click Generator</button>
+                </div>
+            </div>
+        <script type="text/javascript" src="game.js"></script>
+    </body>
+</html>

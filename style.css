@@ -1,0 +1,50 @@
+* {
+    background-color: #00DADC;
+}
+
+.Title1 {
+    font-size: 100px;
+    background-color: rgb(255, 221, 110);
+    text-align: center;
+    font-family: Trattatello, fantasy;
+}
+
+.upgrades {
+    font-size: 45px;
+    text-align: center;
+    background-color: rgb(255, 204, 65);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+li {
+    background-color: white;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.pirate {
+    align-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.pirate:active {
+    filter: invert();
+}
+
+.scourge {
+    align-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    height:400px;
+    background-color: rgb(255, 204, 65);
+}
+
+.titleBanner {
+    align-content: center;
+    background-color: rgb(255, 204, 65);
+}
