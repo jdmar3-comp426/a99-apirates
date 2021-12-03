@@ -4,6 +4,8 @@ var multiplier = 1;
 var passive_multiplier = 0;
 var req_active_points = 25;
 var req_passive_points = 25;
+var incr_factor = 1;
+var incr_factor2 = 1;
 
 function load_game() {
     // Here is where a GET request is needed from the DB for the player's current click counter,
@@ -14,6 +16,8 @@ function load_game() {
     // Should be able to just pull newly-initialized DB data for player
     update_reqmt_lock();
     document.getElementById("click_counter").innerHTML = counter;
+    document.getElementById("next_active_upgrade").innerHTML = req_active_points;
+    document.getElementById("next_passive_upgrade").innerHTML = req_passive_points;
     document.getElementById("active_upgrade_value").innerHTML = multiplier+1;
     document.getElementById("passive_upgrade_value").innerHTML = passive_multiplier+1;
     document.getElementById("multiplier").innerHTML = multiplier;
@@ -21,14 +25,18 @@ function load_game() {
 };
 
 function increase_active_reqmt() {
-    req_active_points = req_active_points * 2;
+    req_active_points = (req_active_points) + (50*incr_factor);
+    incr_factor +=1;
     update_reqmt_lock();
+    document.getElementById("next_active_upgrade").innerHTML = req_active_points;
 };
 
 function increase_passive_reqmt() {
-    req_passive_points = req_passive_points * 2;
+    req_passive_points = req_passive_points + (50*incr_factor2);
+    incr_factor2 +=1;
     console.log(req_passive_points);
     update_reqmt_lock();
+    document.getElementById("next_passive_upgrade").innerHTML = req_passive_points;
 };
 
 function update_reqmt_lock() {
@@ -64,15 +72,15 @@ function passive_click() {
 
 function buy_active_upgrade() {
     multiplier += 1;
-    document.getElementById("active_upgrade_value").innerHTML = multiplier+1;
-    document.getElementById("multiplier").innerHTML = multiplier;
+    //document.getElementById("active_upgrade_value").innerHTML = multiplier+1;
+    //document.getElementById("multiplier").innerHTML = multiplier;
     increase_active_reqmt();
 };
 
 function buy_passive_upgrade() {
     passive_multiplier += 1;
-    document.getElementById("passive_upgrade_value").innerHTML = passive_multiplier+1;
-    document.getElementById("passive_multiplier").innerHTML = passive_multiplier;
+    //document.getElementById("passive_upgrade_value").innerHTML = passive_multiplier+1;
+    //document.getElementById("passive_multiplier").innerHTML = passive_multiplier;
     increase_passive_reqmt();
 };
 
