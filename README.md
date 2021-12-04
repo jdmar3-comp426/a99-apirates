@@ -1,65 +1,49 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-f059dc9a6f8d3a56e377f745f24479a46679e63a5d9fe6f495e02850cd0d8118.svg)](https://classroom.github.com/online_ide?assignment_repo_id=6362784&assignment_repo_type=AssignmentRepo)
-# a99 Finally
 
-COMP426 final project template repository. All your code and documentation goes here. Change this text to be a brief description of your final project. Put the name in the header above. You will change everything below to be the main technical documentation, as outlined below.
+# SCOURGE OF THE SEVEN SEAS
 
-## First steps
+## Demo Video
 
-Other steps that you will need to take after you have cloned this repository:
+Link: 
 
-1. Choose and update the LICENSE file accordingly. 
-2. Edit this README.md file and use it as the main location of your technical documentation with links out to information contained under `/docs/`.
-3. Create a `/docs/` directory for more elaborate documentation of your API, planning notes, etc.
-4. Make sure that all of your team members have access to the repository as administrators.
-5. Create a project under the **Projects** tab. Use this to manage your planning. Create a To-do list, etc. Explore the tools available and user them to manage your project.
-7. Assign team roles and include a listing of those roles in this README.md file or in another file under `/docs/`.
-8. Then put your entire development workflow in this repository.
-9. Use **Pull requests** to propose changes and incorporate them into your code from various team members. 
-10. Use **Issues** to identify and track bugs and also to communicate about various aspects of the project.
+## Game Description
 
-## Team mangement
+Scourge of the Seven Seas is a pirate themed incremental game. Users are able to create an account consisting of a username, email, and password. Upon reaching the main game page, users can click on the pirate gif displayed to increase their score. There are three pirate gifs available, and users can switch between them as they please. Number of clicks are recorded, and once users reach certain point values, they are able to "buy" certain upgrades. These upgrades include increases in active points per click, as well as passive points. Users can click on the "profile" button to view their account information, update their account information, and delete their account. Users must click the "save" button to save game progress before exiting the application. If a user wishes to log out, they must save their progress, and then click the "log out" button to return to the login page.  
 
-Plan to meet with your team ASAP.
-Talk through identifying roles within your team.
+## Login / Sign Up
 
-Try to figure out what each of you are good at/enjoy doing and try to work out roles that incorporate that.
+If a user is new to the game, they must fill out the sign up form. Upon account creation, they must then fill out the login form with this information to reach the main game page. Returning users can just input their username and password into the login form to reach the main game page. 
 
-Some basic roles you will want to consider:
+## Team Roles
 
-# Michael Su
-1. A review manager - someone to review pull requests and merge or reject them and manage the related discussions
-# Marcus Hayes
-2. A plan manager - someone to keep an eye on the overall plan and keep the project tab/to-do list up to date
-# Brandon Hall & Joshua Spiess
-3. A documentation manager - someone to keep the documentation in order and identify what is missing and needs to be documented
-4. Roles for team members to take charge or different parts of the project. Possible roles:
-# Joshua Spies & Marcus Hayes
-    4. Design lead
+Michael Su
+- Review Manager
 
-    Branch Name: __
-# Joshua Spiess & Brandon Hall
-    1. Front end lead 
+Marcus Hayes
+- Plan Manager
 
-    Branch Name: __
-# Luis David Garcilazo & Michael Su
-    2. Back end lead 
-# Luis David Garcilazo & Marcus Hayes
-    3. Database lead
+Brandon Hall & Joshua Spiess
+- Documentation Managers 
+
+Joshua Spiess & Marcus Hayes
+- Design Leads
+
+Brandon Hall & Joshua Spiess
+- Front End Leads
+
+Luis David Garcilazo & Michael Su
+- Back End Leads
+
+Luis David Garcilazo & Marcus Hayes
+- Database Leads
 
 
-You will notice that there are more roles than people in your group.
-That is because you will all be doing a hybrid job of managing a thing while working on other things.
 
-## Check in with instructional staff
+## Planning Documentation
 
-Once all the groups are together, we'll assign each group to an LA to check in with as you progress through the project.
+/docs/planning.md/
 
-We will post that so that your team can schedule a time for an initial check-in with your assigned LA. It would be a good idea also to add your LA to your repository.
+## API Documentation
 
-## Assignment instructions
+/docs/api.md/
 
-And that is about all you need to get started.
-
-All the rest of the assignment instructions are available at: https://comp426.johndmart.in/assignments/99
-
-Good skill, and have fun with this!
