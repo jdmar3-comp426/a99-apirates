@@ -1,95 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href='https://i.imgur.com/fAcKFfb.gif'>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Scourge of the Seven Seas Login</title>
     <link rel="stylesheet" href="node_modules/bulma/css/bulma.css">
-    <link rel="stylesheet" href="custom_style.css">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Shrikhand&display=swap" rel="stylesheet">
-    <title> a99 ex </title>
+    <!--Luis Scripts-->
+    <script src="forms.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/core.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
 </head>
 <body>
-    <br>
-    <br>
-    
-        <div class="hero-body titleBanner">
-            <img class="scourge" src="https://i.imgur.com/yZbl9ej.gif" alt="Scourge of the 7 Seas">
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <div class="columns">
-                <div class="column is-one-quarter is-narrow">
-                    <div class="box">
-                        <h1 class="upgrades">Upgrades</h1>
-                        
-                        <br>
-                        <ul>
-                            <li> <button id="active_click_upgrade" class="button is-warning is-focused is-large" onclick="buy_active_upgrade()">Buy Click Booster</button></li>
-                            <li> <span class="pointsreq">Points Required: </span><span class="pointsvalue" id="next_active_upgrade"></span>
-                                <br>
-                                <br>
-                            <li> <button id="passive_click_upgrade" class="button is-warning is-focused is-large" onclick="buy_passive_upgrade()">Buy Click Generator</button></li>
-                            <li> <span class="pointsreq">Points Required: </span><span class="pointsvalue" id="next_passive_upgrade"></span>
-                                <br>
-                                <br>
-
-                            <li> <h1 class="upgrades">Pirate Select</h1></li>
-                            <li> <button class="button is-large is-success" onclick="document.getElementById('Pirate2').src='https://i.imgur.com/1jFDIxG.gif'"> Terry ---     
-                                    <span class="icon">
-                                        <img src='https://i.imgur.com/1jFDIxG.gif'>
-                                    </span>
-                                </button></li>
-
-                            <li> <button class="button is-large is-success" onclick="document.getElementById('Pirate2').src='https://i.imgur.com/fAcKFfb.gif'"> Brownbeard ---     
-                                <span class="icon">
-                                    <img src='https://i.imgur.com/fAcKFfb.gif'>
-                                </span>
-                            </button></li>
-                      
-                            <li> <button class="button is-large is-success" onclick="document.getElementById('Pirate2').src='https://i.imgur.com/c5LfVeJ.gif'"> Jess ---     
-                                <span class="icon">
-                                    <img src='https://i.imgur.com/c5LfVeJ.gif'>
-                                </span>
-                            </button></li>
-
-                        </ul>
+<section style="background-color:rgb(255, 204, 65)" class="box has-text-centered">
+    <img src="https://i.imgur.com/yZbl9ej.gif" style="width:600px; height:400px;">
+</section>
+<section class="section" style="background-color:#00DADC">
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+                <h1 class="title has-text-centered">Login</h1>
+                <!--Login Form-->
+                <!--Will need to change action parameter to load main game page-->
+                <form class="box" id="loginForm" action="accountInfo.html">
+                    <div class="field">
+                        <label for="user1" class="label">Username</label>
+                        <div class="control">
+                            <input id = "user1"class="input" type="text" placeholder="Enter Username" name="user1">
+                        </div>
                     </div>
-                </div>
-
-                <div class="column ">
-                    <h1 class="upgrades">Point Count: <span id="click_counter" class="upgrades2"></span></h1>
-
-
-                    <img class="Pirate" id='Pirate2' src='https://i.imgur.com/fAcKFfb.gif' alt="This will display an animated GIF" onclick="active_click()"/>
-              
-                </div>
-
-                <div class="column box is-one-quarter">
-                   <h1 class="upgrades">RULES:</h1>
-                   <br>
-                   <p class="pointsreq">Welcome to Scourge of the Seven Seas! The object is to get as high of a "click" score 
-                       as possible. As you reach new scores, more upgrades will be available for you to buy. Use Pirate Select
-                       to switch your pirate. Good luck and happy clicking!
-                   </p>
-                   <br>
-                   <br>
-                   <p class="pointsreq">“I am a man of fortune and must seek my fortune.”      ―Captain Henry Avery</p>
-                </div>
+                    <div class="field">   
+                        <label for="pass1" class="label">Password</label>                     
+                        <div class="control">
+                            <input class="input"  type="password" id="pass1" placeholder="Enter Password" name="pass1">
+                        </div>
+                    </div>
+                    <!--Login Button-->
+                    <div class="field">
+                        <div class="control">
+                            <button class="button is-dark is-fullwidth" type="submit">Login</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="column">
+                <h1 class="title has-text-centered">Sign Up</h1>
+                <!--Sign Up Form-->
+                <!--Will need to change action parameter to load main game page-->
+                <form id="signup" class="box" >
+                    <div class="field">
+                        <label class="label" for="user">Username</label>
+                        <div class="control">
+                            <input class="input" type="text" id="user" placeholder="Enter Username" name="username">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="pass" class="label" >Password</label>
+                        <div class="control">
+                            <input id="pass" class="input" type="password" placeholder="Enter Password" name="password">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="email" class="label" >Email</label>
+                        <div class="control">
+                            <input id="email" class="input" type="text" placeholder="Enter Email">
+                        </div>
+                    </div>
+                    <!-- <div class="field">
+                        <label class="label">Choose Team</label>
+                        <div class="control">
+                            <div class="select">
+                                <select name="accountType">
+                                    <option>The Octopus Riders</option>
+                                    <option>The Giant Turtle Pillagers</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!--Sign Up Button-->
+                    <div class="field">
+                        <div class="control">
+                            <button class="button is-dark is-fullwidth" type="submit">Sign Up</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
-        <br>
-        <br>
-        <a href= "xxxxx"> </a><button class="button is-focused is-large">Main Page</button> </a>
-        <a href= "xxxxx"> </a><button class="button is-focused is-large">Profile</button> </a>
-        <a href= "xxxxx"> </a><button class="button is-focused is-large">Log Out</button> </a>
-        <br>
-        <br>
-        <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=3091311371/size=small/bgcol=ffffff/linkcol=0687f5/track=1901824485/transparent=true/" seamless><a href="https://widdly2diddly.bandcamp.com/album/lisa-soundtrack">LISA Soundtrack by Widdly 2 Diddly</a></iframe>
-    </section>
-    <script type="text/javascript" src="game.js"></script>
+    </div>
+</section>
 </body>
 </html>

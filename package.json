@@ -7,12 +7,20 @@
     "doc": "docs"
   },
   "dependencies": {
-    "bulma": "^0.9.3"
+    "better-sqlite3": "^7.4.5",
+    "browser-sync": "^2.27.7",
+    "bulma": "^0.9.3",
+    "concurrently": "^6.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "md5": "^2.3.0"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "client": "npx browser-sync start -sw",
+    "server": "node server.js",
+    "start": "concurrently --kill-others \"npm run client\" \"npm run server\""
   },
+  "proxy": "http://localhost:8080",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jdmar3-comp426/a99-apirates.git"
@@ -22,5 +30,6 @@
   "bugs": {
     "url": "https://github.com/jdmar3-comp426/a99-apirates/issues"
   },
-  "homepage": "https://github.com/jdmar3-comp426/a99-apirates#readme"
+  "homepage": "https://github.com/jdmar3-comp426/a99-apirates#readme",
+  "devDependencies": {}
 }
