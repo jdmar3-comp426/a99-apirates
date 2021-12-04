@@ -1,0 +1,13 @@
+#game_screen {
+    display: block;
+    margin: auto;
+    width: 50%;
+}
+
+#item_shop {
+    display: flex;
+}
+
+#item {
+    flex: 1;
+}
