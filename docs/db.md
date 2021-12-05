@@ -14,7 +14,7 @@ userinfo
 
 -points INTEGER, Current points of the user, initialized to 0
 
--active INTEGER, Current upgrade level of points per click, initialized at 0
+-active INTEGER, Current upgrade level of points per click, initialized at 1
 
 -passive INTEGER, Current upgrade level of passive points per second, initialized at 0
 
