@@ -47,3 +47,10 @@ Luis David Garcilazo & Marcus Hayes
 
 /docs/api.md/
 
+## "How to execute" Documentation
+
+/docs/executionreq.md/
+
+## Database Documentation
+
+/docs/db.md/
