@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href='https://i.imgur.com/fAcKFfb.gif'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/bulma/css/bulma.css">
+    <link rel="stylesheet" href="custom_style.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Shrikhand&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/core.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
+    <title> Scourge of the Seven Seas </title>
+</head>
+<body>
+    <br>
+    <br>
+    
+        <div class="hero-body titleBanner">
+            <img class="scourge" src="https://i.imgur.com/yZbl9ej.gif" alt="Scourge of the 7 Seas">
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-one-quarter is-narrow">
+                    <div class="box">
+                        <h1 class="upgrades">Upgrades</h1>
+                        
+                        <br>
+                        <ul>
+                            <li> <button id="active_click_upgrade" class="button is-warning is-focused is-large" onclick="buy_active_upgrade()">Buy Click Booster</button></li>
+                            <li> <span class="pointsreq">Points Required: </span><span class="pointsvalue" id="next_active_upgrade"></span>
+                                <br>
+                                <br>
+                            <li> <button id="passive_click_upgrade" class="button is-warning is-focused is-large" onclick="buy_passive_upgrade()">Buy Click Generator</button></li>
+                            <li> <span class="pointsreq">Points Required: </span><span class="pointsvalue" id="next_passive_upgrade"></span>
+                                <br>
+                                <br>
+
+                            <li> <h1 class="upgrades">Pirate Select</h1></li>
+                            <li> <button class="button is-large is-success" onclick="document.getElementById('Pirate2').src='https://i.imgur.com/1jFDIxG.gif'"> Terry ---     
+                                    <span class="icon">
+                                        <img src='https://i.imgur.com/1jFDIxG.gif'>
+                                    </span>
+                                </button></li>
+
+                            <li> <button class="button is-large is-success" onclick="document.getElementById('Pirate2').src='https://i.imgur.com/fAcKFfb.gif'"> Brownbeard ---     
+                                <span class="icon">
+                                    <img src='https://i.imgur.com/fAcKFfb.gif'>
+                                </span>
+                            </button></li>
+                      
+                            <li> <button class="button is-large is-success" onclick="document.getElementById('Pirate2').src='https://i.imgur.com/c5LfVeJ.gif'"> Jess ---     
+                                <span class="icon">
+                                    <img src='https://i.imgur.com/c5LfVeJ.gif'>
+                                </span>
+                            </button></li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="column ">
+                    <h1 class="upgrades">Point Count: <span id="click_counter" class="upgrades2"></span></h1>
+
+
+                    <img class="Pirate" id='Pirate2' src='https://i.imgur.com/fAcKFfb.gif' alt="This will display an animated GIF" onclick="active_click()"/>
+              
+                </div>
+
+                <div class="column box is-one-quarter">
+                   <h1 class="upgrades">RULES:</h1>
+                   <br>
+                   <p class="pointsreq">Welcome to Scourge of the Seven Seas! The object is to get as high of a "click" score 
+                       as possible. As you reach new scores, more upgrades will be available for you to buy. Use Pirate Select
+                       to switch your pirate. Good luck and happy clicking!
+                   </p>
+                   <br>
+                   <br>
+                   <p class="pointsreq">“I am a man of fortune and must seek my fortune.”      ―Captain Henry Avery</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <a href= "xxxxx"> </a><button onclick="window.location.href='accountInfo.html'" class="button is-focused is-large" >Profile</button> </a>
+        <a href= "xxxxx"> </a><button onclick="window.location.href='index.html'" class="button is-focused is-large">Log Out</button> </a>
+        <a href= "xxxxx"> </a><button onclick="saveGame()" class="button is-focused is-large">Save Game</button> </a>
+        <br>
+        <br>
+        <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=3091311371/size=small/bgcol=ffffff/linkcol=0687f5/track=1901824485/transparent=true/" seamless><a href="https://widdly2diddly.bandcamp.com/album/lisa-soundtrack">LISA Soundtrack by Widdly 2 Diddly</a></iframe>
+    </section>
+    <script type="text/javascript" src="game.js"></script>
+</body>
+</html>

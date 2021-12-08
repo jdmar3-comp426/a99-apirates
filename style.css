@@ -1,0 +1,81 @@
+
+
+body { background-image:url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7fd19610-cc88-4e2e-a929-ca0a008d6bb0/dc41zjt-7c4d88e6-8f23-4761-92aa-166374658e14.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzdmZDE5NjEwLWNjODgtNGUyZS1hOTI5LWNhMGEwMDhkNmJiMFwvZGM0MXpqdC03YzRkODhlNi04ZjIzLTQ3NjEtOTJhYS0xNjYzNzQ2NThlMTQuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Orj_FsxTdGTbQ2pbH3Q8YgBqs6knaCXhXmQm_VWDvA8');
+       background-position: center;
+       
+       background-size:contain
+ }
+
+.Title1 {
+    font-size: 100px;
+    background-color: rgb(255, 221, 110);
+    text-align: center;
+    font-family: Trattatello, fantasy;
+}
+
+.upgrades {
+    font-size: 45px;
+    text-align: center;
+    background-color: rgb(255, 204, 65);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.upgrades2 {
+    font-size: 55px;
+    color:rgb(0, 96, 148);
+    text-align: center;
+    background-color: rgb(255, 204, 65);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+li {
+    background-color: white;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Pirate {
+    align-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.Pirate:active {
+    filter: invert();
+}
+
+.scourge {
+    align-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    height:400px;
+    background-color: rgb(255, 204, 65);
+}
+
+.titleBanner {
+    align-content: center;
+    background-color: rgb(255, 204, 65);
+}
+
+.pointsreq {
+    align-content: center;
+    text-align: center;
+    font-family: Trebuchet MS, sans-serif;
+    background-color: white;
+    font-size: 25px;
+}
+
+.pointsvalue {
+    align-content: center;
+    font-family: monospace;
+    background-color: white;
+    color:rgb(181, 132, 0)
+}
+
+.upgradeButton {
+
+}
